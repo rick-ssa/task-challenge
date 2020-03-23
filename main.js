@@ -55,6 +55,8 @@ async function render() {
 
     container.appendChild(add)
 
+    task = task.sort((a,b)=>a.deadline>b.deadline)
+    
     task.map((v,i)=>{      
         let tsk = createTaskElement(v,i)
         taskElements.push(tsk)
